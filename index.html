@@ -184,7 +184,7 @@
 
         .motto-walk {
             animation: slideWalk 2s ease forwards 3s;
-            opacity: 0; /* Start hidden, will be set to visible by animation */
+            opacity: 0;
         }
 
         .motto-in {
@@ -193,7 +193,7 @@
 
         .motto-light {
             animation: fadeIn 1s ease forwards 5s;
-            color: var(--navy-blue); /* Remove colorCycle, set blue like others */
+            color: var(--navy-blue);
         }
 
         .graduation-icon {
@@ -249,7 +249,6 @@
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             transition: none;
-            /* No magnification */
         }
 
         .value-item:nth-child(3) {
@@ -354,7 +353,6 @@
             margin-bottom: 1rem;
         }
 
-        /* Added partner logo styles */
         .footer-partners {
             display: flex;
             justify-content: center;
@@ -363,13 +361,23 @@
             margin-top: 1rem;
         }
 
-        .footer-partners img {
-            height: 48px;
-            width: auto;
+        .footer-partners .partner-file {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.5rem 0.9rem;
             border-radius: 6px;
             background: #fff;
-            padding: 4px;
+            color: #000080;
+            text-decoration: none;
+            font-weight: 600;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,0,0,0.08);
+            min-height: 48px;
+        }
+
+        .footer-partners .partner-file:hover {
+            background: #f2f6ff;
         }
 
         /* Animations */
@@ -423,16 +431,7 @@
             }
             100% {
                 opacity: 1;
-                transform: translateX(0); /* Rest at default position, visible */
-            }
-        }
-
-        @keyframes colorCycle {
-            0%, 100% {
-                color: var(--yellow);
-            }
-            50% {
-                color: var(--light-green);
+                transform: translateX(0);
             }
         }
 
@@ -442,15 +441,6 @@
             }
             100% {
                 transform: translateX(-50%);
-            }
-        }
-
-        @keyframes slideRight {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-100%);
             }
         }
 
@@ -527,7 +517,6 @@
     </header>
 
     <main>
-        <!-- Home Page -->
         <div id="home" class="page active">
             <section class="hero">
                 <div class="container">
@@ -550,7 +539,6 @@
             </section>
         </div>
 
-        <!-- About Page -->
         <div id="about" class="page">
             <div class="container">
                 <section class="about-section">
@@ -577,71 +565,22 @@
                 <section class="values-section">
                     <h2 style="color: var(--navy-blue); text-align: center; margin-bottom: 2rem;">Our Core Values</h2>
                     <div class="values-container">
-                        <div class="value-item">
-                            <h3>Integrity</h3>
-                            <p>We uphold honesty and moral principles in all our actions.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Excellence</h3>
-                            <p>We strive for the highest standards in education and character.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Compassion</h3>
-                            <p>We show kindness and understanding to all members of our community.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Innovation</h3>
-                            <p>We embrace new ideas and creative approaches to learning.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Integrity</h3>
-                            <p>We uphold honesty and moral principles in all our actions.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Excellence</h3>
-                            <p>We strive for the highest standards in education and character.</p>
-                        </div>
-                        <!-- Duplicate for seamless loop -->
-                        <div class="value-item">
-                            <h3>Integrity</h3>
-                            <p>We uphold honesty and moral principles in all our actions.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Excellence</h3>
-                            <p>We strive for the highest standards in education and character.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Compassion</h3>
-                            <p>We show kindness and understanding to all members of our community.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Innovation</h3>
-                            <p>We embrace new ideas and creative approaches to learning.</p>
-                        </div>
-                         <div class="value-item">
-                            <h3>Integrity</h3>
-                            <p>We uphold honesty and moral principles in all our actions.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Excellence</h3>
-                            <p>We strive for the highest standards in education and character.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Compassion</h3>
-                            <p>We show kindness and understanding to all members of our community.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Innovation</h3>
-                            <p>We embrace new ideas and creative approaches to learning.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Integrity</h3>
-                            <p>We uphold honesty and moral principles in all our actions.</p>
-                        </div>
-                        <div class="value-item">
-                            <h3>Excellence</h3>
-                            <p>We strive for the highest standards in education and character.</p>
-                        </div>
+                        <div class="value-item"><h3>Integrity</h3><p>We uphold honesty and moral principles in all our actions.</p></div>
+                        <div class="value-item"><h3>Excellence</h3><p>We strive for the highest standards in education and character.</p></div>
+                        <div class="value-item"><h3>Compassion</h3><p>We show kindness and understanding to all members of our community.</p></div>
+                        <div class="value-item"><h3>Innovation</h3><p>We embrace new ideas and creative approaches to learning.</p></div>
+                        <div class="value-item"><h3>Integrity</h3><p>We uphold honesty and moral principles in all our actions.</p></div>
+                        <div class="value-item"><h3>Excellence</h3><p>We strive for the highest standards in education and character.</p></div>
+                        <div class="value-item"><h3>Integrity</h3><p>We uphold honesty and moral principles in all our actions.</p></div>
+                        <div class="value-item"><h3>Excellence</h3><p>We strive for the highest standards in education and character.</p></div>
+                        <div class="value-item"><h3>Compassion</h3><p>We show kindness and understanding to all members of our community.</p></div>
+                        <div class="value-item"><h3>Innovation</h3><p>We embrace new ideas and creative approaches to learning.</p></div>
+                        <div class="value-item"><h3>Integrity</h3><p>We uphold honesty and moral principles in all our actions.</p></div>
+                        <div class="value-item"><h3>Excellence</h3><p>We strive for the highest standards in education and character.</p></div>
+                        <div class="value-item"><h3>Compassion</h3><p>We show kindness and understanding to all members of our community.</p></div>
+                        <div class="value-item"><h3>Innovation</h3><p>We embrace new ideas and creative approaches to learning.</p></div>
+                        <div class="value-item"><h3>Integrity</h3><p>We uphold honesty and moral principles in all our actions.</p></div>
+                        <div class="value-item"><h3>Excellence</h3><p>We strive for the highest standards in education and character.</p></div>
                     </div>
                 </section>
 
@@ -678,7 +617,6 @@
             </div>
         </div>
 
-        <!-- Contact Page -->
         <div id="contact" class="page">
             <div class="container">
                 <section class="contact-section">
@@ -707,10 +645,9 @@
                     <p>P.O. Box PRIVATE, NKUBU</p>
                 </div>
 
-                <!-- Partner logo -->
                 <div class="footer-partners">
                     <span style="color:var(--white); font-weight:600;">Partners:</span>
-                    <img src="GR L.pdf" alt="GR L partner file">
+                    <a class="partner-file" href="GR L.pdf" target="_blank" rel="noopener">GR L.pdf</a>
                 </div>
 
                 <p>&copy; 2025 St. Ann's School. All rights reserved.</p>
@@ -720,14 +657,9 @@
 
     <script>
         function showPage(pageId) {
-            // Hide all pages
             const pages = document.querySelectorAll('.page');
             pages.forEach(page => page.classList.remove('active'));
-            
-            // Show selected page
             document.getElementById(pageId).classList.add('active');
-            
-            // Close mobile menu if open
             const navMenu = document.querySelector('.nav-menu');
             navMenu.classList.remove('active');
         }
@@ -737,7 +669,6 @@
             navMenu.classList.toggle('active');
         }
 
-        // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 const navMenu = document.querySelector('.nav-menu');
@@ -745,20 +676,16 @@
             });
         });
 
-        // Smooth scrolling for internal links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             });
         });
 
-        // Add scroll effect to header
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
